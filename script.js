@@ -32,7 +32,7 @@ let quote = document.querySelector('.quote');
 let author = document.querySelector('.author');
 
 const displayQuote = () => {
-  quote.innerText = randomQuote.text;
+  quote.innerText = `"${randomQuote.text}"`;
   author.innerText = randomQuote.author;
 };
 
