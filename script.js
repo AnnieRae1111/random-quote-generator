@@ -16,6 +16,7 @@ const getQuotes = async () => {
       quotes = data;
       console.log(quotes);
       getRandomQuote();
+      displayQuote();
     })
     .catch((err) => {
       console.log(err);
@@ -28,9 +29,12 @@ const getRandomQuote = () => {
 };
 
 let quote = document.querySelector('.quote');
-let author = document.querySelecto;
+let author = document.querySelector('.author');
 
-const displayQuote = (randomQuote) => {};
+const displayQuote = () => {
+  quote.innerText = randomQuote.text;
+  author.innerText = randomQuote.author;
+};
 
 let quoteButton = document.querySelector('.quote-button');
 quoteButton.addEventListener('click', () => {
